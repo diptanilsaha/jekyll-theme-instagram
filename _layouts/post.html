@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{% assign error = false %}
+{% assign error_message = "" %}
+
+{%- if page.title == nil -%}
+    {%- assign error = true -%}
+    {%- assign error_message = error_message | append: "Error: Title is missing in frontmatter. " -%}
+{%- endif -%}
+
+{%- if page.date == nil -%}
+    {%- assign error = true -%}
+    {%- assign error_message = error_message | append: "Error: Date is missing in frontmatter. " -%}
+{%- endif -%}
+
+{%- if page.thumbnail == nil -%}
+    {%- assign error = true -%}
+    {%- assign error_message = error_message | append: "Error: Thumbnail is missing in frontmatter. " -%}
+{%- endif -%}
+
+{%- if site.theme_config.archive and page.archive_date == nil -%}
+    {%- assign error = true -%}
+    {%- assign error_message = error_message | append: "Error: Archive Date is missing in frontmatter. " -%}
+{%- endif -%}
+
+{%- if error -%}
+<div style="color: red; font-weight: bold;">
+    {{ error_message }}
+    <p>File: {{ page.path }}</p>
+</div>
+{%- else -%}
+
+<div class="post-container">
+    <div class="title">{{ page.title }}</div>
+    <div class="date">Posted on: {{ page.date | date_to_string }}</div>
+    {% if site.theme_config.archive -%}
+    <div class="archive-date">Archived on: {{ page.archive_date | date_to_string }}</div>
+    {%- endif -%}
+    <hr>
+
+    {%- assign media = page.media -%}
+
+    {%- if media.size > 0 -%}
+    <ul class="media-list">
+        {%- for item in media -%}
+        <li>
+            
+            {%- include media.html src=item.url type=item.type -%}
+
+        </li>
+        {%- endfor -%}
+    </ul>
+    {%- endif -%}
+
+    {{ content | newline_to_br }}
+</div>
+{%- endif -%}

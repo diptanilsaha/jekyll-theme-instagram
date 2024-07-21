@@ -1,0 +1,25 @@
+title: jekyll-theme-instagram
+name: Jekyll Theme Instagram
+description: 'A minimalist Jekyll theme for creating an Instagram-inspired user profile page.'
+url: https://diptanil.page
+baseurl: "/jekyll-theme-instagram"
+header_img: /media/jekyll-theme-instagram.png
+
+ig_username: 
+ig_category: Jekyll Theme
+ig_website: github.com/diptanilsaha/jekyll-theme-instagram/
+
+footer_website: diptanil.page
+
+favicon: /media/favicon.ico
+
+theme: jekyll-theme-instagram # if you are using GitHub Pages, change it to remote_theme: diptanilsaha/jekyll_theme_instagram
+
+theme_config:
+  archive: true
+
+include:
+  - media
+
+sass:
+  style: :compressed
