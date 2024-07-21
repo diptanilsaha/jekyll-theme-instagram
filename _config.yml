@@ -13,9 +13,6 @@ footer_website: diptanil.page
 
 favicon: /media/favicon.ico
 
-plugins:
-  - jekyll-remote-theme
-
 remote_theme: diptanilsaha/jekyll-theme-instagram
 
 theme_config:
