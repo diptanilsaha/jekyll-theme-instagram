@@ -13,7 +13,10 @@ footer_website: diptanil.page
 
 favicon: /media/favicon.ico
 
-theme: jekyll-theme-instagram # if you are using GitHub Pages, change it to remote_theme: diptanilsaha/jekyll_theme_instagram
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: diptanilsaha/jekyll-theme-instagram
 
 theme_config:
   archive: true
