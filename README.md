@@ -9,6 +9,8 @@ This Jekyll theme transforms your blog into an Instagram-like archive, perfect f
 
 Ideal for influencers, photographers, or anyone looking to maintain an independent archive of their Instagram content in a familiar, visually appealing format.
 
+[View Demo](https://diptanil.page/jekyll-theme-instagram/)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
