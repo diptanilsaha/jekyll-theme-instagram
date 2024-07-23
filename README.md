@@ -34,11 +34,22 @@ Or install it yourself as:
     $ gem install jekyll-theme-instagram
 
 
-If you are using Github Pages, add this line to your Jekyll site's `_config.yml`:
+You can install the latest code via [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme):  
 
-```yaml
-remote_theme: diptanilsaha/jekyll-theme-instagram
-```
+1. Add this line to your Jekyll site's `Gemfile`:  
+    
+    ```ruby
+    gem "jekyll-theme-instagram"
+    ```  
+
+2. Add these lines to your Jekyll site's `_config.yml`:  
+
+    ```ruby
+    plugins:
+        - jekyll-remote-theme
+
+    remote_theme: diptanilsaha/jekyll-theme-instagram@main
+    ```
 
 ## Usage
 
